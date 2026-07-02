@@ -1,0 +1,1 @@
+A full-stack MERN (MongoDB, Express, React, Node.js) e-commerce application with authentication, product management, cart functionality, payment integration, and an AI-powered chatbot for user assistance.
