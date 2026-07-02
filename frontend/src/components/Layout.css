@@ -1,0 +1,12 @@
+/* FULL PAGE STRUCTURE */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* MAIN CONTENT TAKES REMAINING SPACE */
+  .main {
+    flex: 1;
+    padding: 5px;
+  }

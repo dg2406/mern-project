@@ -1,0 +1,118 @@
+.policy-page {
+    min-height: 90vh;
+    padding: 60px 20px;
+    background: radial-gradient(circle at top, #1e293b, #0f172a 60%);
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Main container */
+  .policy-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px;
+  
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(22px);
+  
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  
+    transition: all 0.3s ease;
+    
+    /* Safe-guard context for backdrop-filters inside nested wrappers */
+    isolation: isolate; 
+  }
+  
+  /* subtle hover lift */
+  .policy-container:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Main title */
+  .policy-container h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #60a5fa;
+  
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+  
+    text-shadow: 0 0 25px rgba(96, 165, 250, 0.25);
+  }
+  
+  /* Intro paragraph */
+  .policy-container > p:first-of-type {
+    color: rgba(255, 255, 255, 0.88); /* Boosted contrast for readability */
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+  }
+  
+  /* Section headings */
+  .policy-container h4 {
+    margin-top: 40px;
+    margin-bottom: 12px;
+  
+    font-size: 1.35rem;
+    font-weight: 700;
+  
+    color: #93c5fd;
+  
+    position: relative;
+    padding-left: 16px;
+    
+    /* Ensures the left pseudo-element bar aligns perfectly across browsers */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Left accent bar */
+  .policy-container h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15%; /* Vertically centers the indicator line */
+  
+    width: 4px;
+    height: 70%;
+  
+    background: linear-gradient(180deg, #2563eb, #60a5fa);
+    border-radius: 10px;
+  }
+  
+  /* Paragraphs */
+  .policy-container p {
+    color: rgba(255, 255, 255, 0.82); /* Increased slightly for clear text density */
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 16px;
+    text-align: left; /* Fallback to prevent awkward spacing blocks on wide screens */
+  }
+  
+  /* Section spacing feel */
+  .policy-container h4 + p {
+    margin-top: 8px;
+  }
+  
+  /* Smooth text selection */
+  .policy-container ::selection {
+    background: rgba(96, 165, 250, 0.3);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .policy-container {
+      padding: 35px 22px;
+    }
+  
+    .policy-container h1 {
+      font-size: 2.4rem;
+    }
+  
+    .policy-container h4 {
+      font-size: 1.2rem;
+    }
+  }

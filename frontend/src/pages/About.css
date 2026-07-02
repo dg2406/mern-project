@@ -1,0 +1,115 @@
+/* About Page Section */
+.about-page {
+    min-height: 90vh;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Main container */
+  .about-container {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(18px);
+  
+    border-radius: 30px;
+    overflow: hidden;
+  
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    
+    /* Prevents backdrop-filter from breaking overflow-hidden rounded corners */
+    isolation: isolate; 
+  }
+  
+  /* Image section */
+  .about-image {
+    flex: 0.9;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    display: block;
+  
+    /* Matches the container's rounded corners on desktop */
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  /* Content section */
+  .about-content {
+    flex: 1.1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Heading */
+  .about-content h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #60a5fa;
+    margin-bottom: 25px;
+  }
+  
+  /* Paragraph */
+  .about-content p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: left; /* Changed from justify for cleaner word-spacing */
+  }
+  
+  /* Button */
+  .about-btn {
+    margin-top: 20px;
+    width: fit-content;
+    padding: 14px 35px;
+  
+    border: none;
+    border-radius: 30px;
+  
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    color: white;
+  
+    font-size: 1rem;
+    font-weight: 600;
+  
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .about-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 900px) {
+    .about-container {
+      flex-direction: column;
+    }
+  
+    .about-image img {
+      height: 320px;
+      /* Flips the rounded corners to the top on mobile layouts */
+      border-radius: 30px 30px 0 0; 
+    }
+  
+    .about-content {
+      padding: 35px 25px;
+    }
+  
+    .about-content h1 {
+      font-size: 2.5rem;
+    }
+  }

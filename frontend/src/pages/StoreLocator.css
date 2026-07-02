@@ -1,0 +1,182 @@
+.store-page {
+    min-height: 100vh;
+    padding: 70px 20px;
+  
+    background: radial-gradient(circle at top, #0f172a, #020617 70%);
+  }
+  
+  /* HEADER */
+  .store-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .store-header h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+  
+    color: #60a5fa;
+  
+    margin-bottom: 10px;
+  
+    letter-spacing: -0.5px;
+  
+    text-shadow: 0 0 25px rgba(96, 165, 250, 0.15);
+  }
+  
+  .store-header p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1.1rem;
+  
+    max-width: 600px;
+    margin: auto;
+  
+    line-height: 1.6;
+  }
+  
+  /* GRID */
+  .store-grid {
+    max-width: 1300px;
+    margin: auto;
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+  
+  /* CARD */
+  .store-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(22px);
+  
+    border-radius: 24px;
+    padding: 32px;
+  
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    transition: all 0.3s ease;
+  
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* glowing top line */
+  .store-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 3px;
+  
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    opacity: 0.9;
+  }
+  
+  /* hover */
+  .store-card:hover {
+    transform: translateY(-10px);
+  
+    box-shadow: 0 25px 70px rgba(37, 99, 235, 0.2);
+  
+    border: 1px solid rgba(96, 165, 250, 0.2);
+  }
+  
+  /* TITLE */
+  .store-card h3 {
+    color: #93c5fd;
+    margin-bottom: 18px;
+  
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  
+  /* INFO */
+  .store-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  
+    margin-bottom: 14px;
+  
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .store-info svg {
+    color: #60a5fa;
+    flex-shrink: 0;
+  }
+  
+  /* BUTTON */
+  .store-btn {
+    margin-top: 20px;
+  
+    border: none;
+    padding: 12px 26px;
+  
+    border-radius: 999px;
+  
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    color: white;
+  
+    font-weight: 600;
+    font-size: 0.95rem;
+  
+    cursor: pointer;
+  
+    transition: all 0.25s ease;
+  
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* hover */
+  .store-btn:hover {
+    transform: translateY(-3px);
+  
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+  }
+  
+  /* shimmer */
+  .store-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+  
+    width: 100%;
+    height: 100%;
+  
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+  
+    transition: 0.5s;
+  }
+  
+  .store-btn:hover::before {
+    left: 100%;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .store-header h1 {
+      font-size: 2.4rem;
+    }
+  
+    .store-card {
+      padding: 24px;
+    }
+  }
